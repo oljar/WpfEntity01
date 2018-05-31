@@ -27,9 +27,12 @@ namespace WpfEntityCRUD
             InitializeComponent();
         }
 
-        private void insertBtn_Click(object sender, RoutedEventArgs e)
 
+
+        private void insertBtn_Click_1(object sender, RoutedEventArgs e)
         {
+
+
             member newMember = new member()
             {
                 name = nametextBox.Text,
@@ -40,8 +43,6 @@ namespace WpfEntityCRUD
             _db.SaveChanges();
             MainWindow.datagrid.ItemsSource = _db.members.ToList();
             this.Hide();
-
-
 
         }
     }

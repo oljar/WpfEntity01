@@ -14,7 +14,7 @@
         <DataGrid.Columns>
             <DataGridTextColumn Header="Id" Binding="{Binding id}"/>
             <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
-            <DataGridTextColumn Header="Gender" Binding="{Binding id}"/>
+            <DataGridTextColumn Header="Gender" Binding="{Binding gender}"/>
            
 
             <DataGridTemplateColumn>
@@ -35,7 +35,7 @@
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="insertBtn" Content="Insert" Click="insertBtn_Click"/>
                             <Button x:Name="updateBtn" Content="Update" Click="updateBtn_Click"/>
-                            <Button x:Name="deleteBtn" Content="Update" Click="deleteBtn_Click"/>
+                            <Button x:Name="deleteBtn" Content="Delete" Click="deleteBtn_Click"/>
                           
                         </StackPanel>
 

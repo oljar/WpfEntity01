@@ -53,6 +53,7 @@ namespace WpfEntityCRUD
             int Id = (myDataGrid.SelectedItem as member).id;
             UpdatePage Upage = new UpdatePage(Id);
             Upage.ShowDialog();
+           
 
         }
 
@@ -61,6 +62,7 @@ namespace WpfEntityCRUD
         {
             int Id = (myDataGrid.SelectedItem as member).id;
             var deleteMember = _db.members.Where(m => m.id == Id).Single();
+            _db.members.Remove(deleteMember);
             _db.SaveChanges();
             myDataGrid.ItemsSource = _db.members.ToList();
 

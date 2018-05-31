@@ -35,7 +35,8 @@ namespace WpfEntityCRUD
                                    where m.id == Id
                                    select m).Single();
 
-
+            updateMember.name = nametextBox.Text;
+            updateMember.gender = gendercombobox.Text;
             _db.SaveChanges();
 
             MainWindow.datagrid.ItemsSource = _db.members.ToList();
